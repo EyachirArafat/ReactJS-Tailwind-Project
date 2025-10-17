@@ -129,7 +129,7 @@ export const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded-md hover:bg-accent"
+            className="lg:hidden p-2 rounded-md hover:bg-accent cursor-pointer hover:text-white"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -142,20 +142,20 @@ export const Header = () => {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden border-t"
+              className="lg:hidden border-t overflow-y-auto"
             >
               <div className="py-4 space-y-2">
                 <MobileNavItem title="Products" items={products} />
                 <MobileNavItem title="Resources" items={resources} />
                 <a
                   href="#"
-                  className="block px-4 py-2 text-sm hover:bg-accent rounded-md"
+                  className="block px-4 py-2 text-sm hover:bg-accent hover:text-white rounded-md"
                 >
                   Pricing
                 </a>
                 <a
                   href="#"
-                  className="block px-4 py-2 text-sm hover:bg-accent rounded-md"
+                  className="block px-4 py-2 text-sm hover:bg-accent hover:text-white rounded-md"
                 >
                   About
                 </a>
@@ -214,7 +214,7 @@ const MobileNavItem = ({ title, items }: { title: string; items: Items[] }) => {
     <div>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center justify-between w-full px-4 py-2 text-sm hover:bg-accent rounded-md"
+        className="flex items-center justify-between w-full px-4 py-2 text-sm hover:bg-accent hover:text-white rounded-md"
       >
         {title}
         <ChevronDown
@@ -234,7 +234,7 @@ const MobileNavItem = ({ title, items }: { title: string; items: Items[] }) => {
               <a
                 key={item.title}
                 href={item.href}
-                className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md"
+                className="block px-4 py-2 text-sm text-muted-foreground hover:text-white hover:bg-accent rounded-md"
               >
                 {item.title}
               </a>

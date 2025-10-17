@@ -152,7 +152,6 @@ export const HeroSection = () => {
                   }}
                   className="aspect-square bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center"
                 >
-                  {/* <div className="text-white text-6xl font-bold">🚀</div> */}
                   <img src="/rocket.png" alt="" />
                 </motion.div>
               </div>

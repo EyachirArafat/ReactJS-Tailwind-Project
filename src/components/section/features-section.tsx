@@ -1,19 +1,3 @@
-import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import {
-  Zap,
-  Shield,
-  Users,
-  BarChart,
-  Clock,
-  Globe,
-  Palette,
-  Code,
-  Layers,
-  Smartphone,
-  Cloud,
-  Lock,
-} from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui";
 import {
   Card,
@@ -22,6 +6,22 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { motion } from "framer-motion";
+import {
+  BarChart,
+  Clock,
+  Cloud,
+  Code,
+  Globe,
+  Layers,
+  Lock,
+  Palette,
+  Shield,
+  Smartphone,
+  Users,
+  Zap,
+} from "lucide-react";
+import { useInView } from "react-intersection-observer";
 
 export const FeaturesSection = () => {
   const [ref, inView] = useInView({
@@ -160,7 +160,7 @@ export const FeaturesSection = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           <Tabs defaultValue="design" className="w-full">
-            <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-8">
+            <TabsList className="grid w-full max-w-md mx-auto grid-cols-3 mb-8 overflow-x-auto">
               <TabsTrigger value="design">Design</TabsTrigger>
               <TabsTrigger value="collaborate">Collaborate</TabsTrigger>
               <TabsTrigger value="analytics">Analytics</TabsTrigger>
@@ -168,7 +168,7 @@ export const FeaturesSection = () => {
 
             {Object.entries(tabFeatures).map(([key, feature]) => (
               <TabsContent key={key} value={key}>
-                <Card>
+                <Card className="py-0">
                   <CardContent className="p-8">
                     <div className="grid lg:grid-cols-2 gap-8 items-center">
                       <div>

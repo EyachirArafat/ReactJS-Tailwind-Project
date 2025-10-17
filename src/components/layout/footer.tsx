@@ -67,7 +67,7 @@ export const Footer = () => {
             Subscribe to our newsletter for the latest updates, tips, and
             exclusive offers.
           </p>
-          <form className="flex gap-4 max-w-md mx-auto">
+          <form className="flex gap-2 md:gap-4 max-w-md mx-auto">
             <Input
               type="email"
               placeholder="Enter your email"

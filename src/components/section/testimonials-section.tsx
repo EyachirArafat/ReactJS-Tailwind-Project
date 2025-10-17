@@ -116,7 +116,7 @@ export const TestimonialsSection = () => {
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.3 }}
             >
-              <Card className="border-0 shadow-xl">
+              <Card className="border-0 shadow-xl py-0">
                 <CardContent className="p-8 lg:p-12">
                   <Quote className="w-12 h-12 text-primary/20 mb-6" />
 
