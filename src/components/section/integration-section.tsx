@@ -1,6 +1,4 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import { Badge, Button, Card } from "@/components/ui";
 import { motion } from "framer-motion";
 import { ArrowRight, Zap } from "lucide-react";
 import { useInView } from "react-intersection-observer";

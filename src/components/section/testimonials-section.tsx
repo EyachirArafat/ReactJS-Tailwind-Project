@@ -1,6 +1,11 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+  Button,
+  Card,
+  CardContent,
+} from "@/components/ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -65,6 +70,7 @@ export const TestimonialsSection = () => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 5000);
     return () => clearInterval(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const next = () => {
@@ -209,7 +215,7 @@ export const TestimonialsSection = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="flex items-center gap-2 grayscale hover:grayscale-0 transition-all"
+                className="flex items-center gap-2 transition-all"
               >
                 <span className="text-3xl">{logo.logo}</span>
                 <span className="text-xl font-semibold text-muted-foreground">

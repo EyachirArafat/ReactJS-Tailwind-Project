@@ -64,7 +64,7 @@ export const ComparisonSection = () => {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.2 }}
         >
-          <Card className="overflow-hidden">
+          <Card className="overflow-hidden py-0">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>

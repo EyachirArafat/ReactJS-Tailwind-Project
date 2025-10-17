@@ -61,9 +61,12 @@ export const Header = () => {
             animate={{ opacity: 1, x: 0 }}
             className="flex items-center"
           >
-            <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <a
+              href="/"
+              className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+            >
               Degic
-            </span>
+            </a>
           </motion.div>
 
           {/* Desktop Navigation */}

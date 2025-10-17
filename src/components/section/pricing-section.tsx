@@ -1,14 +1,14 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import {
+  Badge,
+  Button,
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card";
-import { Switch } from "@/components/ui/switch";
+  Switch,
+} from "@/components/ui";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Check, Sparkles, X } from "lucide-react";
