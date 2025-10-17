@@ -54,7 +54,7 @@ export const HeroSection = () => {
             >
               <Badge variant="secondary" className="px-4 py-1.5">
                 <Star className="w-4 h-4 mr-2 fill-current" />
-                #1 Rated Platform for 2024
+                #1 Rated Platform for {new Date().getFullYear()}
               </Badge>
             </motion.div>
 
@@ -90,11 +90,15 @@ export const HeroSection = () => {
               transition={{ delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8"
             >
-              <Button size="lg" className="group">
+              <Button size="lg" className="group cursor-pointer">
                 Get Started Free
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button size="lg" variant="outline" className="group">
+              <Button
+                size="lg"
+                variant="outline"
+                className="group cursor-pointer"
+              >
                 <Play className="mr-2 h-4 w-4 group-hover:scale-110 transition-transform" />
                 Watch Demo
               </Button>
@@ -148,7 +152,8 @@ export const HeroSection = () => {
                   }}
                   className="aspect-square bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center"
                 >
-                  <div className="text-white text-6xl font-bold">🚀</div>
+                  {/* <div className="text-white text-6xl font-bold">🚀</div> */}
+                  <img src="/rocket.png" alt="" />
                 </motion.div>
               </div>
 
@@ -163,7 +168,7 @@ export const HeroSection = () => {
                   repeat: Infinity,
                   repeatType: "loop",
                 }}
-                className="absolute top-10 -right-5 bg-background rounded-lg shadow-xl p-4 border"
+                className="absolute top-10 -right-5 bg-background rounded-lg shadow-xl p-4 border z-10"
               >
                 <div className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
@@ -183,7 +188,7 @@ export const HeroSection = () => {
                   repeat: Infinity,
                   repeatType: "loop",
                 }}
-                className="absolute bottom-10 -left-5 bg-background rounded-lg shadow-xl p-4 border"
+                className="absolute z-10 bottom-10 -left-5 bg-background rounded-lg shadow-xl p-4 border"
               >
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded" />

@@ -1,0 +1,10 @@
+export { ComparisonSection } from './comparison-section'
+export { CTASection } from './cta-section'
+export { FAQSection } from './faq-section'
+export { FeaturesSection } from './features-section'
+export { HeroSection } from './hero-section'
+export { IntegrationsSection } from './integration-section'
+export { PricingSection } from './pricing-section'
+export { StatsSection } from './stats-section'
+export { TestimonialsSection } from './testimonials-section'
+
