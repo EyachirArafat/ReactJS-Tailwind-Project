@@ -7,7 +7,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui";
-import { products, resources } from "@/lib/constants";
+import { PRODUCTS, RESOURCES } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
@@ -60,7 +60,7 @@ export const Header = () => {
                   <NavigationMenuTrigger>Products</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2">
-                      {products.map((product) => (
+                      {PRODUCTS.map((product) => (
                         <ListItem
                           key={product.title}
                           title={product.title}
@@ -77,7 +77,7 @@ export const Header = () => {
                   <NavigationMenuTrigger>Resources</NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[300px] gap-3 p-4">
-                      {resources.map((resource) => (
+                      {RESOURCES.map((resource) => (
                         <ListItem
                           key={resource.title}
                           title={resource.title}
@@ -128,8 +128,8 @@ export const Header = () => {
               className="lg:hidden border-t overflow-y-auto"
             >
               <div className="py-4 space-y-2">
-                <MobileNavItem title="Products" items={products} />
-                <MobileNavItem title="Resources" items={resources} />
+                <MobileNavItem title="Products" items={PRODUCTS} />
+                <MobileNavItem title="Resources" items={RESOURCES} />
                 <a
                   href="#"
                   className="block px-4 py-2 text-sm hover:bg-accent hover:text-white rounded-md"

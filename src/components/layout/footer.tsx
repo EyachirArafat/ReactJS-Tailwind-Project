@@ -1,5 +1,5 @@
 import { Button, Input, Separator } from "@/components/ui";
-import { footerLinks, socialLinks } from "@/lib/constants";
+import { FOOTER_LINKS, SOCIALS_LINKS } from "@/lib/constants";
 import { motion } from "framer-motion";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
@@ -65,7 +65,7 @@ export const Footer = () => {
           </div>
 
           {/* Footer Links */}
-          {Object.entries(footerLinks).map(([category, links], index) => (
+          {Object.entries(FOOTER_LINKS).map(([category, links], index) => (
             <motion.div
               key={category}
               initial={{ opacity: 0, y: 20 }}
@@ -110,7 +110,7 @@ export const Footer = () => {
             viewport={{ once: true }}
             className="flex gap-4"
           >
-            {socialLinks.map((social, index) => (
+            {SOCIALS_LINKS.map((social, index) => (
               <a
                 key={index}
                 href={social.href}

@@ -6,6 +6,7 @@ import {
   Badge,
   Button,
 } from "@/components/ui";
+import { FAQS } from "@/lib/constants";
 import { motion } from "framer-motion";
 import { HelpCircle, MessageCircle } from "lucide-react";
 import { useInView } from "react-intersection-observer";
@@ -15,49 +16,6 @@ export const FAQSection = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  const faqs = [
-    {
-      question: "How does the free trial work?",
-      answer:
-        "You get 14 days of unlimited access to all features. No credit card required. After the trial, you can choose a plan that suits your needs.",
-    },
-    {
-      question: "Can I change my plan later?",
-      answer:
-        "Yes! You can upgrade or downgrade your plan at any time. Changes take effect at the next billing cycle, and we'll prorate any differences.",
-    },
-    {
-      question: "Do you offer discounts for nonprofits?",
-      answer:
-        "We offer 50% discount for registered nonprofits and educational institutions. Contact our sales team with your verification documents.",
-    },
-    {
-      question: "Is my data secure?",
-      answer:
-        "Absolutely. We use bank-level encryption (AES-256) for data at rest and TLS 1.3 for data in transit. We're also SOC 2 Type II certified.",
-    },
-    {
-      question: "Can I export my presentations?",
-      answer:
-        "Yes, you can export your presentations in multiple formats including PDF, PowerPoint, and as a shareable link. Video export is available on Pro plans.",
-    },
-    {
-      question: "Do you have an API?",
-      answer:
-        "Yes, we offer a comprehensive REST API for Enterprise customers. This allows you to integrate our platform with your existing tools and workflows.",
-    },
-    {
-      question: "What kind of support do you offer?",
-      answer:
-        "We offer email support for all plans, priority support for Pro users, and 24/7 phone support for Enterprise customers. We also have extensive documentation and video tutorials.",
-    },
-    {
-      question: "Can I collaborate with my team?",
-      answer:
-        "Yes! Real-time collaboration is available on all paid plans. You can work together on presentations, leave comments, and track changes.",
-    },
-  ];
 
   return (
     <section ref={ref} className="py-20 bg-muted/30">
@@ -83,7 +41,7 @@ export const FAQSection = () => {
             </p>
 
             <Accordion type="single" collapsible className="space-y-4">
-              {faqs.map((faq, index) => (
+              {FAQS.map((faq, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}

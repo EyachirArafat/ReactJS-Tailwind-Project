@@ -1,4 +1,5 @@
 import { Badge, Card } from "@/components/ui";
+import { COMPARISON_FEATURES, COMPETITORS } from "@/lib/constants";
 import { motion } from "framer-motion";
 import { Check, X } from "lucide-react";
 import { useInView } from "react-intersection-observer";
@@ -8,34 +9,6 @@ export const ComparisonSection = () => {
     triggerOnce: true,
     threshold: 0.1,
   });
-
-  const competitors = [
-    { name: "Degic", isUs: true },
-    { name: "Competitor A", isUs: false },
-    { name: "Competitor B", isUs: false },
-    { name: "Competitor C", isUs: false },
-  ];
-
-  const features = [
-    {
-      feature: "Unlimited Presentations",
-      us: true,
-      others: [false, true, false],
-    },
-    { feature: "AI-Powered Design", us: true, others: [false, false, false] },
-    {
-      feature: "Real-time Collaboration",
-      us: true,
-      others: [true, false, true],
-    },
-    { feature: "Advanced Analytics", us: true, others: [false, true, false] },
-    { feature: "Custom Templates", us: true, others: [true, true, false] },
-    { feature: "24/7 Support", us: true, others: [false, false, true] },
-    { feature: "White Labeling", us: true, others: [false, false, false] },
-    { feature: "API Access", us: true, others: [true, false, false] },
-    { feature: "Offline Mode", us: true, others: [false, false, false] },
-    { feature: "Version History", us: true, others: [true, true, true] },
-  ];
 
   return (
     <section ref={ref} className="py-20">
@@ -70,7 +43,7 @@ export const ComparisonSection = () => {
                 <thead>
                   <tr className="border-b bg-muted/50">
                     <th className="text-left p-4 font-medium">Features</th>
-                    {competitors.map((comp, index) => (
+                    {COMPETITORS.map((comp, index) => (
                       <th key={index} className="text-center p-4 min-w-[120px]">
                         <div className="flex flex-col items-center gap-2">
                           <span className="font-medium">{comp.name}</span>
@@ -85,7 +58,7 @@ export const ComparisonSection = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {features.map((item, index) => (
+                  {COMPARISON_FEATURES.map((item, index) => (
                     <motion.tr
                       key={index}
                       initial={{ opacity: 0, x: -20 }}
