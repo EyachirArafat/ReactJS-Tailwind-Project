@@ -1,57 +1,9 @@
 import { Button, Input, Separator } from "@/components/ui";
+import { footerLinks, socialLinks } from "@/lib/constants";
 import { motion } from "framer-motion";
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Send,
-  Twitter,
-  Youtube,
-} from "lucide-react";
+import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 export const Footer = () => {
-  const footerLinks = {
-    Product: [
-      { label: "Features", href: "#" },
-      { label: "Pricing", href: "#" },
-      { label: "Templates", href: "#" },
-      { label: "Integrations", href: "#" },
-      { label: "Changelog", href: "#" },
-    ],
-    Company: [
-      { label: "About Us", href: "#" },
-      { label: "Blog", href: "#" },
-      { label: "Careers", href: "#" },
-      { label: "Press", href: "#" },
-      { label: "Partners", href: "#" },
-    ],
-    Resources: [
-      { label: "Documentation", href: "#" },
-      { label: "Help Center", href: "#" },
-      { label: "Community", href: "#" },
-      { label: "Webinars", href: "#" },
-      { label: "API Reference", href: "#" },
-    ],
-    Legal: [
-      { label: "Privacy Policy", href: "#" },
-      { label: "Terms of Service", href: "#" },
-      { label: "Cookie Policy", href: "#" },
-      { label: "GDPR", href: "#" },
-      { label: "Security", href: "#" },
-    ],
-  };
-
-  const socialLinks = [
-    { icon: Facebook, href: "#" },
-    { icon: Twitter, href: "#" },
-    { icon: Instagram, href: "#" },
-    { icon: Linkedin, href: "#" },
-    { icon: Youtube, href: "#" },
-  ];
-
   return (
     <footer className="bg-muted/50 border-t">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -99,18 +51,15 @@ export const Footer = () => {
                 drive results.
               </p>
               <div className="space-y-2">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Mail className="w-4 h-4" />
-                  <span>support@degic.com</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Phone className="w-4 h-4" />
-                  <span>+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <MapPin className="w-4 h-4" />
-                  <span>San Francisco, CA</span>
-                </div>
+                {contact.map((item, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-2 text-sm text-muted-foreground"
+                  >
+                    {item.icon}
+                    <span>{item.label}</span>
+                  </div>
+                ))}
               </div>
             </motion.div>
           </div>
@@ -176,3 +125,18 @@ export const Footer = () => {
     </footer>
   );
 };
+
+const contact = [
+  {
+    icon: <Mail className="w-4 h-4" />,
+    label: "support@degic.com",
+  },
+  {
+    icon: <Phone className="w-4 h-4" />,
+    label: "+1 (555) 123-4567",
+  },
+  {
+    icon: <MapPin className="w-4 h-4" />,
+    label: "San Francisco, CA",
+  },
+];

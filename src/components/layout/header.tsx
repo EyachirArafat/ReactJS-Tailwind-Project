@@ -7,6 +7,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui";
+import { products, resources } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronDown, Menu, X } from "lucide-react";
@@ -23,24 +24,6 @@ export const Header = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const products = [
-    { title: "Analytics", href: "#", description: "Get detailed insights" },
-    { title: "Engagement", href: "#", description: "Boost user interaction" },
-    {
-      title: "Security",
-      href: "#",
-      description: "Enterprise-grade protection",
-    },
-    { title: "Integrations", href: "#", description: "Connect your tools" },
-  ];
-
-  const resources = [
-    { title: "Documentation", href: "#" },
-    { title: "Blog", href: "#" },
-    { title: "Case Studies", href: "#" },
-    { title: "API Reference", href: "#" },
-  ];
 
   return (
     <motion.header
